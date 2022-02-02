@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: lightblue;
+    font-size: 1rem;
+    text-align: justify;
+    font-family: "Source Sans Pro", sans-serif;
+}
+p {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 10px 0px;
+    /*text-indent: 30px;*/
+}
+.arch-section {
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-bottom: 50px;
+    margin-right: 80px;
+
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h6 {
+    font-size: 0.85rem;
+}
+u {
+    text-decoration: underline;
+}
+.arch-heading {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: underline;
+    margin-bottom:1.3rem;
+}
+.arch-grid-container {
+    /*position: relative;*/
+    margin-top: 0px;
+    padding: 5px;
+    grid-gap: 2rem;
+
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+
+    justify-content: space-evenly;
+
+}
+.arch-grid-item {
+    text-align: left ;
+    width: 400px;
+    border-radius: 10px;
+}
+#arch-grid-news {
+    margin: 0px;
+    line-height: auto;
+    padding: 20px;
+    border: none;
+}
+#arch-grid-img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px 10px 0px 0px;
+}
+#arch-grid-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.arch-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .arch-section {
+        margin-top: 25px;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    .arch-grid-container {
+        padding: 0px;
+        margin: 1rem;
+        grid-gap: 2rem;
+
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+
+        justify-content: space-evenly;
+
+        grid-template-columns: repeat(1,1fr);
+        /*padding: 2px;*/
+   }
+    .arch-grid-item {
+        text-align: left ;
+        border-radius: 10px;
+        width: 100%;
+    }
+    #arch-grid-img {
+        height: 40vh;
+    }
+    #arch-grid-title {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .arch-section {
+        margin-top: 30px;
+        margin-left: 17px;
+        margin-bottom: 17px;
+        margin-right: 17px;
+    }
+
+    .arch-grid-container {
+        padding: 0px;
+        margin-top: 40px;
+        grid-gap: 2rem;
+
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+
+        justify-content: space-evenly;
+
+        grid-template-columns: repeat(2,1fr);
+        /*padding: 2px;*/
+   }
+    .arch-grid-item {
+        text-align: left ;
+        border-radius: 10px;
+        width: 100%;
+    }
+    #arch-grid-img {
+        height: 40vh;
+    }
+    #arch-grid-title {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .arch-section {
+        margin-top: 30px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        margin-right: 50px;
+
+    }
+
+    .arch-grid-container {
+        /*position: relative;*/
+        margin-top: 45px;
+        /*padding: 30px;*/
+        grid-gap: 2rem;
+
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+
+        justify-content: space-evenly;
+
+    }
+    .arch-grid-item {
+        text-align: left ;
+        /*width: 400px;*/
+        width: 100%;
+        border-radius: 10px;
+    }
+    #arch-grid-news {
+        margin: 0px;
+        line-height: auto;
+        padding: 20px;
+        border: none;
+    }
+    #arch-grid-img {
+        width: 100%;
+        height: 40vh;
+        border-radius: 10px 10px 0px 0px;
+    }
+    #arch-grid-title {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}
+

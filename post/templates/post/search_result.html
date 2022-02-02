@@ -1,0 +1,10 @@
+
+<div>
+    <div class="search-result-container">
+        <div><a href="{{ post.get_absolute_url }}">
+            <h4 id="search-result-title">{{ post.title }}</h4>
+            <p>{{ post.body|truncatewords:35 }}</p>
+            <h6>{{ post.published.time }}</h6></a>
+        </div>
+    </div>
+</div>

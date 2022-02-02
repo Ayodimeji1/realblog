@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<main>
+    <section>
+        <div class="article">
+            <h3 id="article-title">{{ post.title }}</h3>
+            <img id="article-img" src="{{ post.image.url }}">
+            <p id="article-date">{{ post.published }}</p>
+            <p id="article-body">{{ post.body|linebreaks }}</p>
+        </div>
+
+        <hr/>
+        <div class="comment">
+            <h5>Add Comment</h5>
+            <form method="post" action="">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <button type="submit" class="btn btn-primary">Comment</button>
+            </form>
+
+
+            {% with comments.count as total_comments %}
+                <h5 class="mt-5">
+                    {{ total_comments }} comment{{ total_comments|pluralize }}
+                </h5>
+            {% endwith %}
+
+            {% if not post.comments.all %}
+                No comments yet
+
+            {% else %}
+                {% for comment in post.get_comments %}
+                    {% include 'post/comment.html' with comment=comment %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}

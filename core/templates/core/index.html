@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %} Welcome | {% endblock %}
+
+{% block content %}
+<main>
+    <section class="section">
+            {% for post in featured %}
+            <div class="latest-col"><a href="{{ post.get_absolute_url }}"></a>
+                <img src="{{ post.image.url }}" alt="" id="latest-img">
+                <div id="latest-news">
+                    <h3 id="latest-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+                    <article></article>
+                    <p>{{ post.body|truncatewords:17 }}</p>
+                    <h6>{{ post.published.time }}</h6>
+                </div>
+            </div>
+            {% endfor %}
+
+
+            <div class="grid-container">
+                {% for post in posts %}
+                <div class="grid-item" style="
+                background: rgba(255, 255, 255, 0.658);
+                "><a href="{{ post.get_absolute_url }}">
+                    <img src="{{ post.image.url }}" alt="" id="grid-img">
+                    <div id="grid-news">
+                        <h3 id="grid-title">{{ post.title }}</h3>
+                        <p>{{ post.body|truncatewords:15 }}</p>
+                        <h6>{{ post.published.time }}</h6>
+                    </div></a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="center">
+                {% include 'core/pagination.html' with page=posts %}
+            </div>
+        </section>
+</main>
+{% endblock %}

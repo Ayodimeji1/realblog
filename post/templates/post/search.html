@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Search  | {% endblock %}
+
+{% block content %}
+<section class="search-section">
+    <div class="search-page">
+        <div class="search-container">
+            <!--<h3 class="search-title">Search</h3>-->
+            <p class="search-query">Showing results of : {{ query }}</p>
+        </div>
+        <div>
+        {% for post in posts %}
+            {% include 'post/search_result.html' %}
+        {% empty %}
+            {% include 'post/search_no_result.html' %}
+        {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

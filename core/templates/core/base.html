@@ -1,0 +1,98 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.88.1">
+        <title>TheBlog</title>
+
+        <!--Google font-->
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+        <!--Font Awesome-->
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+        <script src="https://kit.fontawesome.com/4b47f6323b.js" crossorigin="anonymous"></script>
+
+        <!--Bootstrap-->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!--CSS-->
+
+        <link href="{% static 'css/navbar.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/article.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/archives.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/about.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/search.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/index.css' %}" rel="stylesheet">
+
+
+        <!-- javascript -->
+
+        <script src="{% static 'js/main.js'%}"></script>
+
+    </head>
+    <body>
+    <main>
+        <header>
+            <div class="containerr">
+              <input type="checkbox" name="" id="check">
+              <div class="logo-containerr"></div>
+                <h3 class="logos"><a href="{% url 'index' %}">Real<span>Blog</span></a></h3>
+              <div class="nav-btnn">
+                <div class="nav-linkss">
+                  <ul>
+                    <li class="nav-links">
+                      <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-links">
+                      <a href="{% url 'archives' %}">Archives</a>
+                    </li>
+                    <li class="nav-links">
+                      <a href="{% url 'about' %}">About</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="search">
+                    <form method="get" action="{% url 'search' %}" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" name="query" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                    </form>
+                </div>
+              </div>
+              <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+        {% block content %}
+
+        {% endblock content %}
+        </div>
+
+        <div class="footer-container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                   <li class="nav-item"><a href="{% url 'index' %}" class="nav-link px-2 ">Home</a></li>
+                   <li class="nav-item"><a href="{% url 'archives' %}" class="nav-link px-2 ">Archives</a></li>
+                   <li class="nav-item"><a href="{% url 'about' %}" class="nav-link px-2 ">About</a></li>
+                </ul>
+                <p class="text-center text-muted">&copy; 2022 RealBlog</p>
+            </footer>
+        </div>
+    </main>
+  </body>
+</html>
