@@ -43,8 +43,6 @@ STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/images/'
 
-AWS_S3_FILE_OVERWRITE = False
-
 #heroku logging
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
