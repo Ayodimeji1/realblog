@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: lightblue;
+    font-size: 1rem;
+    text-align: justify;
+    font-family: "Source Sans Pro", sans-serif;
+}
+p {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 10px 0px;
+    /*text-indent: 30px;*/
+}
+.search-section {
+    margin-top: 2rem;
+    margin-right: 20rem;
+    margin-bottom: 3rem;
+    margin-left: 20rem;
+    min-height: 100vh;
+}
+/* .search-page {
+    width: inherit;
+    height:100%;
+} */
+.search-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0rem;
+    padding: 0rem;
+}
+.search-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.80rem;
+    font-weight: 600;
+}
+.search-query {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 3rem;
+}
+.search-result-container {
+    margin-bottom: 3rem;
+    padding: 0rem;
+}
+.search-result-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.50rem;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .search-section {
+        margin-top: 2rem;
+        margin-left: 0.9rem;
+        margin-bottom: 1.5rem;
+        margin-right: 0.9rem;
+    }
+    .search-query {
+    margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .search-section {
+        margin-top: 2rem;
+        margin-left: 0.9rem;
+        margin-bottom: 1.5rem;
+        margin-right: 0.9rem;
+    }
+    .search-query {
+    margin-bottom: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .search-section {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-bottom: 1.5rem;
+        margin-right: 1rem;
+    }
+    .search-query {
+        margin-bottom: 1.28rem;
+    }
+}
