@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'storages',
     'core',
     'post',
+    'whitenoise'
 ]
 
 MIDDLEWARE = [
