@@ -9,8 +9,7 @@ from .base import *
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = True
 ALLOWED_HOSTS = ['realblog1.herokuapp.com']
 
 #AWS S3 CONFIG
@@ -31,6 +30,8 @@ AWS_S3_OBJECT_PARAMETERS = {
 AWS_LOCATION = 'static'
 
 AWS_QUERYSTRING_AUTH = False
+
+AWS_S3_FILE_OVERWRITE = False
 
 AWS_HEADERS = {
     'Access-Control-Allow-Origin': '*',
