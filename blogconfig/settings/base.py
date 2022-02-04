@@ -15,8 +15,6 @@ from decouple import config
 from dotenv import load_dotenv, find_dotenv
 import os
 
-
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -78,8 +76,8 @@ WSGI_APPLICATION = 'blogconfig.wsgi.application'
 
 load_dotenv(find_dotenv())
 
-DATABASES = {'default': dj_database_url.config(default= 'sqlite:///db.sqlite3', conn_max_age= 600)
-}
+DATABASES = {'default': dj_database_url.config(default= 'sqlite:///db.sqlite3', conn_max_age= 600)}
+
 
 
 # Password validation
