@@ -1,0 +1,41 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="4">
+            <item index="0" class="java.lang.String" itemvalue=":src" />
+            <item index="1" class="java.lang.String" itemvalue="@click" />
+            <item index="2" class="java.lang.String" itemvalue="v-for" />
+            <item index="3" class="java.lang.String" itemvalue="v-bind" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="python-decouple" />
+            <item index="1" class="java.lang.String" itemvalue="django-cors-headers" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="Lazo.settings.pk_test_abf9ebd652514f64bfb004be60e673c92224aa56" />
+          <option value="Lazo.settings.sk_test_05e65d231a09f6b2d86495fa3e526d807287ccf8" />
+          <option value="Lazo.settings.secret" />
+          <option value="Lazo.settings.paystack" />
+          <option value="Lazo.settings.key" />
+          <option value="Lazo.settings.public" />
+          <option value="app.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
